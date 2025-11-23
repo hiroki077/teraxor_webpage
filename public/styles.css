@@ -23,7 +23,7 @@
 
 html {
     scroll-behavior: smooth;
-    cursor: none;
+    cursor: auto;
 }
 
 body {
@@ -35,6 +35,7 @@ body {
 
 /* Custom Cursor */
 .cursor {
+    display: none;
     position: fixed;
     pointer-events: none;
     z-index: 100000;
