@@ -1,5 +1,3 @@
 name = "teraxor"
 compatibility_date = "2025-11-23"
-assets = { directory = "./" }
-
-route = { pattern = "teraxor.com/*", zone_name = "teraxor.com" }
+assets = { directory = "public" }
