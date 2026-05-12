@@ -158,3 +158,68 @@ document.querySelectorAll('.team-member, .service-card, .about-lead, .about-text
     el.style.opacity = '1';
     el.style.transform = 'none';
 });
+
+/* ---------- i18n: JA / EN switcher ---------- */
+const STORAGE_KEY = 'teraxor.lang';
+
+const captureOriginals = () => {
+    document.querySelectorAll('[data-en]').forEach(el => {
+        if (el.dataset.ja === undefined) {
+            el.dataset.ja = el.innerHTML;
+        }
+    });
+    document.querySelectorAll('[data-placeholder-en]').forEach(el => {
+        if (el.dataset.placeholderJa === undefined) {
+            el.dataset.placeholderJa = el.getAttribute('placeholder') || '';
+        }
+    });
+};
+
+const applyLang = (lang) => {
+    const useEn = lang === 'en';
+    document.documentElement.lang = useEn ? 'en' : 'ja';
+
+    document.querySelectorAll('[data-en]').forEach(el => {
+        const next = useEn ? el.dataset.en : el.dataset.ja;
+        if (next !== undefined && el.innerHTML !== next) {
+            el.innerHTML = next;
+        }
+    });
+
+    document.querySelectorAll('[data-placeholder-en]').forEach(el => {
+        const next = useEn ? el.dataset.placeholderEn : el.dataset.placeholderJa;
+        if (next !== undefined) {
+            el.setAttribute('placeholder', next);
+        }
+    });
+
+    document.querySelectorAll('.lang-opt').forEach(opt => {
+        opt.classList.toggle('active', opt.dataset.lang === lang);
+    });
+};
+
+const detectInitialLang = () => {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved === 'ja' || saved === 'en') return saved;
+    const browser = (navigator.language || 'ja').toLowerCase();
+    return browser.startsWith('ja') ? 'ja' : 'en';
+};
+
+captureOriginals();
+let currentLang = detectInitialLang();
+applyLang(currentLang);
+
+const langToggle = document.getElementById('langToggle');
+if (langToggle) {
+    langToggle.addEventListener('click', (e) => {
+        // Allow clicking a specific JA/EN label, otherwise toggle
+        const target = e.target.closest('.lang-opt');
+        const next = target && target.dataset.lang
+            ? target.dataset.lang
+            : (currentLang === 'ja' ? 'en' : 'ja');
+        if (next === currentLang) return;
+        currentLang = next;
+        localStorage.setItem(STORAGE_KEY, currentLang);
+        applyLang(currentLang);
+    });
+}

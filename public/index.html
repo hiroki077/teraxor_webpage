@@ -36,6 +36,11 @@
                 <li><a href="#company" class="nav-link">Company</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
+            <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language">
+                <span class="lang-opt" data-lang="ja">JA</span>
+                <span class="lang-sep">/</span>
+                <span class="lang-opt" data-lang="en">EN</span>
+            </button>
         </div>
     </nav>
 
@@ -54,7 +59,7 @@
                 <img src="logo.jpg" alt="teraXor Logo">
             </div>
             <h1 class="hero-title">teraXor</h1>
-            <p class="hero-subtitle">テクノロジーで、次の価値を創る。</p>
+            <p class="hero-subtitle" data-en="Crafting the next value through technology.">テクノロジーで、次の価値を創る。</p>
             <p class="hero-description">AI × SaaS Technology Company</p>
         </div>
         <div class="scroll-indicator">
@@ -70,15 +75,15 @@
         <div class="section-container">
             <h2 class="section-title">About</h2>
             <div class="about-content">
-                <p class="about-lead">
+                <p class="about-lead" data-en="“Raise” the “Value” — our reason for being.">
                     「価値（Value）」を「上げる（Rise）」、私たちの存在理由。
                 </p>
-                <p class="about-text">
+                <p class="about-text" data-en="teraXor is a technology company on a mission to elevate value for people, businesses, and society — leveraging cutting-edge technologies such as AI and SaaS.">
                     teraXorは、AIやSaaSなど最先端のテクノロジーを活用し、
                     生活者・事業者・社会のあらゆる場面で「価値」を引き上げることをミッションに掲げる
                     テクノロジーカンパニーです。
                 </p>
-                <p class="about-text">
+                <p class="about-text" data-en="Centered on AI and SaaS development, we plan, build, and operate our own products end-to-end. We listen closely to our users and craft each product with care, one step at a time.">
                     AIとSaaSの開発を軸に、自社プロダクトを企画から運営まで一貫して手がけています。
                     利用者の声に耳を傾けながら、ひとつずつ丁寧にものづくりを続けていきます。
                 </p>
@@ -90,13 +95,13 @@
     <section class="services" id="services">
         <div class="section-container">
             <h2 class="section-title">What we do</h2>
-            <p class="section-lead">AI と SaaS、ふたつの軸で開発しています</p>
+            <p class="section-lead" data-en="Two axes of development: AI and SaaS">AI と SaaS、ふたつの軸で開発しています</p>
             <div class="service-cards">
                 <div class="service-card" style="--i: 0">
                     <div class="service-icon">01</div>
                     <h3 class="service-name">AI</h3>
-                    <p class="service-desc">
-                        人工知能を、日常の道具に。<br>
+                    <p class="service-desc" data-en="<strong>Make AI an everyday tool.</strong><br>We design and develop products with AI at their core — LLMs, voice, vision, recommendation. We don’t stop at research; we ship usable products that solve real problems.">
+                        <strong>人工知能を、日常の道具に。</strong><br>
                         LLM、音声、画像、レコメンドなど、AIをコアに据えたプロダクトを企画・開発します。
                         研究で終わらせず、実際に使える形に落とし込むことを大切にしています。
                     </p>
@@ -107,8 +112,8 @@
                 <div class="service-card" style="--i: 1">
                     <div class="service-icon">02</div>
                     <h3 class="service-name">SaaS</h3>
-                    <p class="service-desc">
-                        毎日使われる、プロダクトを。<br>
+                    <p class="service-desc" data-en="<strong>Products used every day.</strong><br>Across web, mobile, and desktop, we design and operate SaaS products that earn daily use. We own UI/UX, infrastructure, and growth — end-to-end.">
+                        <strong>毎日使われる、プロダクトを。</strong><br>
                         Web・モバイル・デスクトップを横断し、毎日使われるSaaSプロダクトを設計・運営します。
                         UI/UX、インフラ、グロースまで一貫して向き合います。
                     </p>
@@ -124,22 +129,22 @@
     <section class="news" id="products">
         <div class="section-container">
             <h2 class="section-title">Products</h2>
-            <p class="section-lead">これまでに開発しているプロダクト例</p>
+            <p class="section-lead" data-en="A few of the products we’ve built">これまでに開発しているプロダクト例</p>
             <div class="news-grid">
                 <a href="https://tokuichiba.jp/" target="_blank" rel="noopener noreferrer" class="news-item product-link">
                     <p class="news-date">01 — Tokuichiba</p>
-                    <h3 class="news-title">とくいちば</h3>
-                    <p class="news-desc">フードロス削減アプリ。地域のスーパーや店舗の値引き情報をリアルタイムで届け、毎日の買い物をお得に、食品ロスをゼロへ。</p>
+                    <h3 class="news-title" data-en="Tokuichiba">とくいちば</h3>
+                    <p class="news-desc" data-en="A food-loss reduction app. Real-time discount alerts from local supermarkets and shops — saving shoppers money and reducing waste to zero.">フードロス削減アプリ。地域のスーパーや店舗の値引き情報をリアルタイムで届け、毎日の買い物をお得に、食品ロスをゼロへ。</p>
                 </a>
                 <a href="http://natives.work/" target="_blank" rel="noopener noreferrer" class="news-item product-link">
-                    <p class="news-date">02 — Natives <span class="product-status">Coming Soon</span></p>
+                    <p class="news-date">02 — Natives <span class="product-status" data-en="Coming Soon">Coming Soon</span></p>
                     <h3 class="news-title">natives</h3>
-                    <p class="news-desc">AI音声リアルタイム通訳。話し手の声色・リズムを保ったまま、自然な会話の流れで多言語コミュニケーションを実現。</p>
+                    <p class="news-desc" data-en="AI real-time voice translation. Natural multilingual conversation that preserves the speaker’s tone and rhythm.">AI音声リアルタイム通訳。話し手の声色・リズムを保ったまま、自然な会話の流れで多言語コミュニケーションを実現。</p>
                 </a>
                 <a href="https://oshipath.com/" target="_blank" rel="noopener noreferrer" class="news-item product-link">
                     <p class="news-date">03 — Oshi-Path</p>
-                    <h3 class="news-title">オシパス</h3>
-                    <p class="news-desc">推し活コミュニティアプリ。「好き」を起点に集い、語り、育てる場所。ファン同士のつながりを次のステージへ。</p>
+                    <h3 class="news-title" data-en="Oshi-Path">オシパス</h3>
+                    <p class="news-desc" data-en="A fan community app. A place to gather, share, and grow your “oshi” — bringing fans to the next stage of connection.">推し活コミュニティアプリ。「好き」を起点に集い、語り、育てる場所。ファン同士のつながりを次のステージへ。</p>
                 </a>
             </div>
         </div>
@@ -149,22 +154,22 @@
     <section class="vision" id="vision">
         <div class="section-container">
             <h2 class="section-title">Vision</h2>
-            <p class="section-lead">私たちが見ている未来</p>
+            <p class="section-lead" data-en="The future we see">私たちが見ている未来</p>
             <div class="vision-grid">
                 <div class="vision-card">
                     <span class="vision-mark">M</span>
                     <h3 class="vision-name">Mission</h3>
-                    <p class="vision-desc">テクノロジーで人と社会の「価値」を引き上げる。</p>
+                    <p class="vision-desc" data-en="Raise the “value” of people and society through technology.">テクノロジーで人と社会の「価値」を引き上げる。</p>
                 </div>
                 <div class="vision-card">
                     <span class="vision-mark">V</span>
                     <h3 class="vision-name">Vision</h3>
-                    <p class="vision-desc">AIとSaaSの力で、誰もが自分らしく挑戦できる世界をつくる。</p>
+                    <p class="vision-desc" data-en="Build a world — powered by AI and SaaS — where anyone can challenge themselves, on their own terms.">AIとSaaSの力で、誰もが自分らしく挑戦できる世界をつくる。</p>
                 </div>
                 <div class="vision-card">
                     <span class="vision-mark">C</span>
                     <h3 class="vision-name">Value</h3>
-                    <p class="vision-desc">ユーザーファースト / 速く、丁寧に / 学び続けるチーム。</p>
+                    <p class="vision-desc" data-en="User-first / Fast and careful / A team that keeps learning.">ユーザーファースト / 速く、丁寧に / 学び続けるチーム。</p>
                 </div>
             </div>
         </div>
@@ -174,36 +179,36 @@
     <section class="team" id="team">
         <div class="section-container">
             <h2 class="section-title">Co-Founders</h2>
-            <p class="section-lead">代表からのメッセージ</p>
+            <p class="section-lead" data-en="Message from the founders">代表からのメッセージ</p>
             <div class="team-grid">
                 <div class="team-member" style="--i: 0">
                     <div class="member-left">
                         <div class="member-avatar"></div>
                         <div class="member-info">
-                            <h3 class="member-name">森 広輝</h3>
-                            <p class="member-title">共同代表 / 技術責任者</p>
-                            <p class="member-title-en">Hiroki Mori — Co-Founder / CTO</p>
+                            <h3 class="member-name" data-en="Hiroki Mori">森 広輝</h3>
+                            <p class="member-title" data-en="Co-Founder / CTO">共同代表 / 技術責任者</p>
+                            <p class="member-title-en" data-en="森 広輝">Hiroki Mori — Co-Founder / CTO</p>
                         </div>
                     </div>
-                    <p class="member-message">「エンジニアリングの専門知識と事業視点を掛け合わせ、お客様のビジネス成長を加速させるテクノロジーパートナーとして伴走します。」</p>
+                    <p class="member-message" data-en="“By combining engineering expertise with a business perspective, I walk alongside our clients as a technology partner that accelerates their growth.”">「エンジニアリングの専門知識と事業視点を掛け合わせ、お客様のビジネス成長を加速させるテクノロジーパートナーとして伴走します。」</p>
                 </div>
                 <div class="team-member" style="--i: 1">
                     <div class="member-left">
                         <div class="member-avatar"></div>
                         <div class="member-info">
-                            <h3 class="member-name">落合 悠</h3>
-                            <p class="member-title">共同代表 / 営業責任者</p>
-                            <p class="member-title-en">Yu Ochiai — Co-Founder / Head of Sales</p>
+                            <h3 class="member-name" data-en="Yu Ochiai">落合 悠</h3>
+                            <p class="member-title" data-en="Co-Founder / Head of Sales">共同代表 / 営業責任者</p>
+                            <p class="member-title-en" data-en="落合 悠">Yu Ochiai — Co-Founder / Head of Sales</p>
                         </div>
                     </div>
-                    <p class="member-message">「困っている人の力になり、安心してもらいたい。一人ひとりに真摯に向き合う姿勢を武器に、私たちは挑戦を続けます。」</p>
+                    <p class="member-message" data-en="“I want to be the one who helps people in trouble feel safe again. Facing each person sincerely is our greatest strength as we keep moving forward.”">「困っている人の力になり、安心してもらいたい。一人ひとりに真摯に向き合う姿勢を武器に、私たちは挑戦を続けます。」</p>
                 </div>
             </div>
 
             <div class="leader-message">
-                <p>私たちteraXorは、「テクノロジーは、人々の生活やビジネスを豊かにしてこそ真の価値を持つ」という信念のもとに立ち上がりました。その根底にあるのは、「困っている人の力になり、安心してもらいたい」という、ごくシンプルで揺るぎない想いです。</p>
-                <p>事業の柱は二つ。お客様の課題に深く寄り添うSaaSの受託開発と、世の中のニーズを直接すくい上げる自社サービスの展開です。ただ仕様通りに作るのではなく、エンジニアリングの専門知識と事業視点を掛け合わせ、お客様のビジネス成長を加速させるテクノロジーパートナーとして伴走します。</p>
-                <p>お客様のビジョンを形にする支援と、自ら社会へ価値を問いかける挑戦を通じて、より多くの人々の生活を豊かにしていく。そして何より、「頼んでよかった」と心から感じていただける仕事を、これからも誠実に積み重ねてまいります。</p>
+                <p data-en="teraXor was founded on the belief that technology only holds true value when it enriches people’s lives and businesses. At its core lies a simple, unwavering hope: to support those in need and bring them peace of mind.">私たちteraXorは、「テクノロジーは、人々の生活やビジネスを豊かにしてこそ真の価値を持つ」という信念のもとに立ち上がりました。その根底にあるのは、「困っている人の力になり、安心してもらいたい」という、ごくシンプルで揺るぎない想いです。</p>
+                <p data-en="Our work rests on two pillars: bespoke SaaS development that engages deeply with each client’s challenges, and our own products that respond directly to the world’s needs. Rather than building strictly to spec, we combine engineering expertise with business perspective to walk alongside our clients as a technology partner that accelerates their growth.">事業の柱は二つ。お客様の課題に深く寄り添うSaaSの受託開発と、世の中のニーズを直接すくい上げる自社サービスの展開です。ただ仕様通りに作るのではなく、エンジニアリングの専門知識と事業視点を掛け合わせ、お客様のビジネス成長を加速させるテクノロジーパートナーとして伴走します。</p>
+                <p data-en="By giving form to our clients’ visions and asking new questions of society through our own work, we will keep enriching more people’s lives. Above all, we will keep doing work that earns the words, “I’m glad we asked them.”">お客様のビジョンを形にする支援と、自ら社会へ価値を問いかける挑戦を通じて、より多くの人々の生活を豊かにしていく。そして何より、「頼んでよかった」と心から感じていただける仕事を、これからも誠実に積み重ねてまいります。</p>
             </div>
         </div>
     </section>
@@ -214,28 +219,28 @@
             <h2 class="section-title">Company</h2>
             <div class="info-grid">
                 <div class="info-item">
-                    <span class="info-label">会社名</span>
+                    <span class="info-label" data-en="Company Name">会社名</span>
                     <span class="info-value">teraXor</span>
                 </div>
                 <div class="info-item">
-                    <span class="info-label">代表者</span>
-                    <span class="info-value">共同代表 / 技術責任者　森 広輝<br>共同代表 / 営業責任者　落合 悠</span>
+                    <span class="info-label" data-en="Representatives">代表者</span>
+                    <span class="info-value" data-en="Co-Founder / CTO  Hiroki Mori<br>Co-Founder / Head of Sales  Yu Ochiai">共同代表 / 技術責任者　森 広輝<br>共同代表 / 営業責任者　落合 悠</span>
                 </div>
                 <div class="info-item">
-                    <span class="info-label">事業内容</span>
-                    <span class="info-value">AI・SaaSサービスの企画、開発、運営</span>
+                    <span class="info-label" data-en="Business">事業内容</span>
+                    <span class="info-value" data-en="Planning, development, and operation of AI and SaaS services">AI・SaaSサービスの企画、開発、運営</span>
                 </div>
                 <div class="info-item">
-                    <span class="info-label">設立</span>
-                    <span class="info-value">2026年</span>
+                    <span class="info-label" data-en="Founded">設立</span>
+                    <span class="info-value" data-en="2026">2026年</span>
                 </div>
                 <div class="info-item">
-                    <span class="info-label">所在地</span>
-                    <span class="info-value">〒530-0001<br>大阪府大阪市北区梅田一丁目2番2号<br>大阪駅前第2ビル 12-12</span>
+                    <span class="info-label" data-en="Location">所在地</span>
+                    <span class="info-value" data-en="Osaka Ekimae Daini Building 12-12<br>1-2-2 Umeda, Kita-ku, Osaka 530-0001, Japan">〒530-0001<br>大阪府大阪市北区梅田一丁目2番2号<br>大阪駅前第2ビル 12-12</span>
                 </div>
                 <div class="info-item">
-                    <span class="info-label">お問い合わせ</span>
-                    <span class="info-value"><a href="#contact" class="info-link">Contact フォームより</a></span>
+                    <span class="info-label" data-en="Contact">お問い合わせ</span>
+                    <span class="info-value"><a href="#contact" class="info-link" data-en="Via the contact form">Contact フォームより</a></span>
                 </div>
             </div>
         </div>
@@ -245,7 +250,7 @@
     <section class="contact" id="contact">
         <div class="section-container">
             <h2 class="contact-title">Contact</h2>
-            <p class="contact-info">お問い合わせ・ご相談はこちら</p>
+            <p class="contact-info" data-en="Get in touch — questions, partnerships, anything.">お問い合わせ・ご相談はこちら</p>
             <p class="contact-info">
                 Email: <a href="mailto:info@teraxor.com" class="contact-link">info@teraxor.com</a>
             </p>
@@ -259,40 +264,41 @@
 
                 <div class="form-row">
                     <label class="form-field">
-                        <span class="form-label">お名前 <em>必須</em></span>
-                        <input type="text" name="お名前" required placeholder="山田 太郎">
+                        <span class="form-label" data-en="Name <em>required</em>">お名前 <em data-en="required">必須</em></span>
+                        <input type="text" name="お名前" required placeholder="山田 太郎" data-placeholder-en="Taro Yamada">
                     </label>
                     <label class="form-field">
-                        <span class="form-label">メールアドレス <em>必須</em></span>
+                        <span class="form-label" data-en="Email <em>required</em>">メールアドレス <em data-en="required">必須</em></span>
                         <input type="email" name="メール" required placeholder="example@teraxor.com">
                     </label>
                 </div>
 
                 <label class="form-field">
-                    <span class="form-label">会社名 / 所属</span>
-                    <input type="text" name="会社名" placeholder="株式会社○○">
+                    <span class="form-label" data-en="Company / Affiliation">会社名 / 所属</span>
+                    <input type="text" name="会社名" placeholder="株式会社○○" data-placeholder-en="Your company">
                 </label>
 
                 <label class="form-field">
-                    <span class="form-label">お問い合わせ種別</span>
+                    <span class="form-label" data-en="Inquiry type">お問い合わせ種別</span>
                     <select name="種別">
-                        <option>サービスについてのお問い合わせ</option>
-                        <option>協業のご相談</option>
-                        <option>採用について</option>
-                        <option>取材・メディア</option>
-                        <option>その他</option>
+                        <option data-en="About our services">サービスについてのお問い合わせ</option>
+                        <option data-en="Partnership inquiry">協業のご相談</option>
+                        <option data-en="Careers">採用について</option>
+                        <option data-en="Press / Media">取材・メディア</option>
+                        <option data-en="Other">その他</option>
                     </select>
                 </label>
 
                 <label class="form-field">
-                    <span class="form-label">お問い合わせ内容 <em>必須</em></span>
+                    <span class="form-label" data-en="Message <em>required</em>">お問い合わせ内容 <em data-en="required">必須</em></span>
                     <textarea name="お問い合わせ内容" rows="6" required
-                              placeholder="ご相談内容を具体的にご記入ください。"></textarea>
+                              placeholder="ご相談内容を具体的にご記入ください。"
+                              data-placeholder-en="Tell us what you’d like to discuss."></textarea>
                 </label>
 
-                <button type="submit" class="form-submit">送信する</button>
+                <button type="submit" class="form-submit" data-en="Send">送信する</button>
 
-                <p class="form-note">
+                <p class="form-note" data-en="Submissions go to <strong>info@teraxor.com</strong>.<br>Your personal information will only be used to respond to your inquiry.">
                     送信内容は <strong>info@teraxor.com</strong> に送られます。<br>
                     ご記入いただいた個人情報は、お問い合わせへの回答以外の目的では使用いたしません。
                 </p>
