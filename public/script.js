@@ -15,13 +15,13 @@ const cursorOutline = document.querySelector('.cursor-outline');
 document.addEventListener('mousemove', (e) => {
     cursorDot.style.left = e.clientX + 'px';
     cursorDot.style.top = e.clientY + 'px';
-    
+
     cursorOutline.style.left = e.clientX + 'px';
     cursorOutline.style.top = e.clientY + 'px';
 });
 
 // Cursor hover
-const hoverElements = document.querySelectorAll('a, button, .service-card, .team-member');
+const hoverElements = document.querySelectorAll('a, button, .service-card, .team-member, .vision-card, .news-item');
 hoverElements.forEach(el => {
     el.addEventListener('mouseenter', () => {
         cursorOutline.classList.add('hover');
@@ -31,27 +31,39 @@ hoverElements.forEach(el => {
     });
 });
 
-// Navigation scroll effect
+// Navigation scroll effect — toggle scrolled / light by current section background
 const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => {
+// Sections explicitly marked as light-background; nav should switch to dark-on-light
+const lightSectionIds = ['about', 'products', 'vision', 'team', 'company'];
+const lightSections = lightSectionIds
+    .map(id => document.getElementById(id))
+    .filter(Boolean);
+
+const updateNavState = () => {
     const scrollY = window.scrollY;
-    
     if (scrollY > 100) {
         nav.classList.add('scrolled');
     } else {
         nav.classList.remove('scrolled');
     }
-    
-    // Check if in white section
-    const aboutTop = document.getElementById('about').offsetTop;
-    const contactTop = document.getElementById('contact').offsetTop;
-    
-    if (scrollY >= aboutTop - 100 && scrollY < contactTop - 100) {
+
+    // Detect if the area just under the nav is over a light section
+    const probeY = scrollY + 60;
+    const overLight = lightSections.some(sec => {
+        const top = sec.offsetTop;
+        const bottom = top + sec.offsetHeight;
+        return probeY >= top && probeY < bottom;
+    });
+
+    if (overLight) {
         nav.classList.add('light');
     } else {
         nav.classList.remove('light');
     }
-});
+};
+
+updateNavState();
+window.addEventListener('scroll', updateNavState, { passive: true });
 
 // Helper: ensure about visible once reached
 const ensureAboutVisibility = () => {
@@ -113,8 +125,10 @@ if (heroSection && aboutSection && enableFullpageSnap) {
 // Smooth scroll (anchors) with snap support for ABOUT
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href === '#') return;
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const target = document.querySelector(href);
         if (target) {
             if (target === aboutSection && snapToSection(target)) {
                 return;
@@ -140,7 +154,7 @@ window.addEventListener('scroll', () => {
 });
 
 // Instantly switch to sections (no scroll-triggered animations)
-document.querySelectorAll('.team-member, .service-card, .about-lead, .about-text').forEach(el => {
+document.querySelectorAll('.team-member, .service-card, .about-lead, .about-text, .vision-card, .news-item').forEach(el => {
     el.style.opacity = '1';
     el.style.transform = 'none';
 });

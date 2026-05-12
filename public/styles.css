@@ -567,6 +567,270 @@ body {
     flex-direction: column;
     align-items: flex-start;
 }
+
+/* Section lead text (shared utility) */
+.section-lead {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.05rem;
+    color: var(--gray-600);
+    margin: -2.5rem 0 3rem;
+    letter-spacing: 0.05em;
+}
+
+.services .section-lead,
+.contact .section-lead {
+    color: var(--gray-300);
+}
+
+/* Service tags */
+.service-tags {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.service-tags span {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--gray-700);
+    border: 1px solid var(--gray-300);
+    padding: 0.3rem 0.7rem;
+    border-radius: 999px;
+    letter-spacing: 0.05em;
+}
+
+/* Product (news) link card */
+.product-link {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.product-status {
+    display: inline-block;
+    margin-left: 0.6rem;
+    padding: 0.15rem 0.55rem;
+    background: var(--black);
+    color: var(--white);
+    font-size: 0.7rem;
+    border-radius: 999px;
+    letter-spacing: 0.08em;
+    vertical-align: middle;
+}
+
+/* Vision Section */
+.vision {
+    padding: 8rem 3rem;
+    background: linear-gradient(180deg, var(--gray-50) 0%, var(--white) 100%);
+    color: var(--black);
+}
+
+.vision-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.vision-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-top: 4px solid var(--black);
+    padding: 2.5rem 2rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.vision-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.vision-mark {
+    font-family: 'Orbitron', monospace;
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(--gray-200);
+    line-height: 1;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.vision-name {
+    font-family: 'Orbitron', monospace;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.05em;
+}
+
+.vision-desc {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--gray-700);
+}
+
+/* Leader message (long-form text) */
+.leader-message {
+    margin-top: 4rem;
+    padding: 2.5rem;
+    background: var(--white);
+    border-left: 4px solid var(--black);
+    border-radius: 8px;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: var(--gray-700);
+    line-height: 2;
+}
+
+.leader-message p {
+    margin-bottom: 1.2rem;
+    font-size: 1rem;
+}
+
+.leader-message p:last-child {
+    margin-bottom: 0;
+}
+
+/* Info link */
+.info-link {
+    color: var(--black);
+    text-decoration: none;
+    border-bottom: 1px solid var(--gray-400);
+    transition: border-color 0.3s ease;
+}
+
+.info-link:hover {
+    border-bottom-color: var(--black);
+}
+
+/* Contact Form */
+.contact-form {
+    max-width: 720px;
+    margin: 4rem auto 0;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-honey {
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--gray-300);
+    letter-spacing: 0.05em;
+}
+
+.form-label em {
+    font-style: normal;
+    font-size: 0.7rem;
+    color: var(--gray-500);
+    margin-left: 0.5rem;
+    padding: 0.1rem 0.4rem;
+    border: 1px solid var(--gray-600);
+    border-radius: 3px;
+    letter-spacing: 0.1em;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--gray-700);
+    color: var(--white);
+    padding: 0.9rem 1rem;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1rem;
+    border-radius: 6px;
+    transition: border-color 0.3s ease, background 0.3s ease;
+    width: 100%;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: var(--gray-500);
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--white);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+.contact-form select {
+    appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, var(--gray-300) 50%),
+                      linear-gradient(135deg, var(--gray-300) 50%, transparent 50%);
+    background-position: calc(100% - 18px) center, calc(100% - 12px) center;
+    background-size: 6px 6px, 6px 6px;
+    background-repeat: no-repeat;
+}
+
+.contact-form select option {
+    background: var(--gray-900);
+    color: var(--white);
+}
+
+.form-submit {
+    align-self: flex-start;
+    margin-top: 0.5rem;
+    padding: 1rem 3rem;
+    background: var(--white);
+    color: var(--black);
+    border: none;
+    font-family: 'Orbitron', monospace;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(255, 255, 255, 0.15);
+}
+
+.form-note {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--gray-500);
+    line-height: 1.8;
+    margin-top: 1rem;
+}
+
+.contact .contact-info {
+    margin-bottom: 0.8rem;
 }
 
 /* Services Section */
@@ -820,5 +1084,21 @@ body {
     .team-grid,
     .service-cards {
         grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .leader-message {
+        padding: 1.5rem;
+    }
+
+    .vision-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .nav-menu {
+        gap: 1.5rem;
     }
 }
